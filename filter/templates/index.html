@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+    {% if image %} 
+        <img src=image>
+    {% endif %}
+    <h1>Upload Image</h1>
+    <div class="container">
+        <form action="" method="POST">
+        {% csrf_token %}
+            <input type="file" name="image" required>
+            </br>
+            <input type="submit">
+        </form>
+    </div>
+{% endblock %}
